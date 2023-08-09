@@ -4,7 +4,7 @@ fun main() {
     
     for(i in 1..99999)
     {
-        if(checkParlindrome(i))
+        if(checkArmStrongNumber(i))
         {
             println(i)
         }
@@ -12,7 +12,7 @@ fun main() {
 }
 
 
-fun checkParlindrome(original_number:Int):Boolean
+fun checkArmStrongNumber(original_number:Int):Boolean
 {
     var armnum= original_number
     var temp=original_number
