@@ -1,0 +1,52 @@
+Find the Armstrong number up to nth value.
+
+fun main() {
+    
+    for(i in 1..99999)
+    {
+        if(checkParlindrome(i))
+        {
+            println(i)
+        }
+    }    
+}
+
+
+fun checkParlindrome(original_number:Int):Boolean
+{
+    var armnum= original_number
+    var temp=original_number
+    var result=0
+    var length=0
+      while (armnum != 0) {
+        armnum /= 10
+        ++length
+      }    
+    
+    
+    while(temp!=0)
+    {
+        var remainder=temp%10
+        result=result+power(remainder,length)
+        temp=temp/10
+    }
+    
+    if(original_number==result)
+    {
+        return true
+    }else
+    {
+        return false
+    }
+   
+}
+
+fun power(remainder:Int,length:Int):Int
+{
+    var power_result=1
+    for(i in 1..length)
+    {
+        power_result *=remainder
+    }
+    return power_result
+}
