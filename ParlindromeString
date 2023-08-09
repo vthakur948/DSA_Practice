@@ -1,0 +1,24 @@
+fun main() {
+    //it is a casesenstive program
+    val orignal_String="nitin"
+    if(checkParlindromeString(orignal_String))
+        {
+            println(orignal_String)
+        }        
+}
+
+
+fun checkParlindromeString(orignal_String:String):Boolean
+{
+    var temp=orignal_String
+    var result=temp.reversed()
+    if(orignal_String.equals(result))
+    {
+        return true
+    }else
+    {
+        return false
+    }
+   
+}
+
