@@ -1,1 +1,53 @@
+fun main() {
+  // sort Array using single While loop
+  
+    var arr=arrayOf(87878,10,15,17,87,47,45,3,0,0,0,57,87878,87878)
+    var length=arr.size-1
+    var i=0
+    while(i<length)
+    {
+        
+        if(arr[i]>arr[i+1])
+        {
+            arr[i]=arr[i]+arr[i+1]
+            arr[i+1]=arr[i]-arr[i+1]
+            arr[i]=arr[i]-arr[i+1]
+            i=-1  //reset the while loop untill list get sorted
+     
+        }
+           i++
+     
+    }
+    
+    
+    //sort array using for loop
+
+    
+  for(i in arr.indices)
+    {
+        
+        for(j in arr.indices)
+        {
+           
+       
+           if(arr[i]<arr[j])
+        {
+            arr[i]=arr[i]+arr[j]
+            arr[j]=arr[i]-arr[j]
+            arr[i]=arr[i]-arr[j]
+        
+        }
+        
+        }
+    }
+        
+    for(element in arr){
+        println(element) 
+    }
+   
+}
+
+
+
+
 
