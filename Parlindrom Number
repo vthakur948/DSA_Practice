@@ -1,0 +1,35 @@
+Find the Parlindrom number up to nth number.
+
+fun main() {
+    
+    for(i in 1..9999)
+    {
+        if(checkParlindrome(i))
+        {
+            println(i)
+        }
+    }    
+}
+
+
+fun checkParlindrome(original_number:Int):Boolean
+{
+    var temp=original_number
+    var result=0
+    while(temp!=0)
+    {
+        var remainder=temp%10
+        result=(result*10)+remainder
+        temp=temp/10
+    }
+    
+    if(original_number==result)
+    {
+        return true
+    }else
+    {
+        return false
+    }
+   
+}
+
