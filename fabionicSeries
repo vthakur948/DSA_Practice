@@ -1,0 +1,60 @@
+// the fabionic series up to nth number
+// total of nth number of fabionic number or ladder step combination upto 3 steps
+// fabionic series using recursion
+
+
+fun main() {
+    
+    
+   // printfabionicSeries(12)
+     println(fabionicSeriesLadderProblemRecursion(12))
+}
+
+
+tailrec fun fabionicSeriesLadderProblemRecursion(number:Int):Int
+{
+    var n=number
+   if(n==1 || n==2 || n==3) 
+    {
+        return n
+    }
+    var stepbyone=fabionicSeriesLadderProblemRecursion(n-1)
+     var stepbytwo=fabionicSeriesLadderProblemRecursion(n-2)
+     // var stepbythree=fabionicSeriesLadderProblemRecursion(n-3)
+      var totalsteps=stepbyone+stepbytwo  //+stepbythree
+    return totalsteps
+}
+
+fun printfabionicSeries(number:Int)
+{
+   var previous=0
+    var next=1
+    var sum=0
+    var i=0
+    if(number>0)
+    {
+        println(previous)
+        println(next)
+        while(i<number)
+        {
+            i++
+            sum=previous+next
+            println(sum)
+            previous=next
+            next=sum
+            
+           if(i==number)
+            {
+                println("This is total distinct combination to climb $number ladder  "+ sum)
+            }
+            
+        }
+    }else
+    {
+       println("Please provide valid input") 
+    }
+    
+    
+    
+    
+}
