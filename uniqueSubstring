@@ -1,11 +1,26 @@
-find the all unique substrings from a single string.
+find the  unique substrings from a single string.
 what is length of longest and smallest substring.
 Reverse a char of String 
 Reverse a Sentence of String
+find a unique char of String
 
+<------------------------------------------------------------------------------------------------------------------------->
+fun main() {
+// find a unique char of String
+     val s = "ppwwkewa"
+     var sett:HashSet<Char> = HashSet()
+    for(i in 0..s.length-1)
+    {
+       sett.add(s[i])
+    } 
+    
+    println(sett.toString())
+      
+}
 
+<------------------------------------------------------------------------------------------------------------------------->
 
-
+//find the all unique substrings from a single string.
 fun main() {
     val s = "ppwwkew"
    
@@ -48,3 +63,15 @@ fun main() {
                
                return false
            }
+
+
+<------------------------------------------------------------------------------------------------------------------------->
+
+// Reverse a String Sentene 
+
+fun main() {
+      val s = "the      sky is blue"
+      val arr = s.split("\\s+".toRegex())
+      println(arr.reversed().joinToString(" ").trim())
+           
+}
