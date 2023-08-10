@@ -2,3 +2,50 @@ find the all unique substrings from a single string.
 what is length of longest and smallest substring.
 Reverse a char of String 
 Reverse a Sentence of String
+
+
+
+
+fun lengthOfLongestSubstring(s: String): Int {
+    var left=0
+    var right=0
+    var length=s.length
+    var count=0
+   
+    while(right<length)
+    {
+          if(checkSubstring(s.substring(left,right),s[right]))
+            {
+                left++
+                
+            }else
+            {
+                 right++;
+               
+            }
+             count=Math.max(right-left,count)
+            
+    }
+    
+    return count
+    
+
+   
+}
+
+fun checkSubstring(s:String,char:Char):Boolean
+{
+    
+    for(i in 0..s.length-1){
+       
+    if(s[i]==char)
+    {
+        
+     return true   
+    }
+    
+    }
+        return false
+    
+    
+}
